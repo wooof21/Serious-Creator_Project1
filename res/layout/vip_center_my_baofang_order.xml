@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/zhongxin_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+   <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="3.02" >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vip_center_my_bf_order_ordering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:text="预定中"
+                android:textColor="#909090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/vip_center_my_bf_order__top_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:background="#ff3c40"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.01"
+            android:background="?android:attr/listDivider"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vip_center_my_bf_order_confirmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:text="已确定"
+                android:textColor="#909090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/vip_center_my_bf_order__top_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:background="@null"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.01"
+            android:background="?android:attr/listDivider"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vip_center_my_bf_order_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:text="已完成"
+                android:textColor="#909090"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/vip_center_my_bf_order__top_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="4px"
+                android:background="@null"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/vip_center_my_bf_order_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zhongxin_bottom_fragment"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/zhongxin_top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/baofang_order_select_top_bg" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#40000000"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:id="@+id/baofang_order_select_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.2"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text="如意坊豆捞(亚泰大街店)"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/baofang_order_select_operate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/baofang_order_select_heart_normal" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="3.01" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.2"
+                    android:orientation="vertical"
+                    android:weightSum="3" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <RatingBar
+                            android:id="@+id/baofang_order_select_tuijian_list_item_ratingbar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:paddingRight="5dp" />
+
+                        <TextView
+                            android:id="@+id/baofang_order_select_tuijian_list_item_rating"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:text="4.5分"
+                            android:textColor="#fa952f"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/baofang_order_select_average"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:gravity="right"
+                            android:text="人均388元"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <com.chihuoshijian.view.MarqueeTV
+                            android:id="@+id/baofang_order_select_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="亚泰大街67交汇" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/baofang_order_select_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="距离&lt;12536m" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="2px"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.01"
+                    android:background="?android:attr/listDivider"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical"
+                    android:weightSum="2.01" >
+
+                    <ImageView
+                        android:id="@+id/baofang_order_select_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/list_item_phone_normal" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.01"
+                        android:background="?android:attr/listDivider"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/baofang_order_select_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/list_item_map_marker" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/baofang_order_select_order"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_bg_lred"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="点餐"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/baofang_order_select_reserve"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/corners_bg_lred"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:text="预定包房"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#f4f4f4"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/mian_remen_tuijian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="推荐菜品"
+                    android:textColor="#4488cc"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/baofang_order_select_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff" >
+            </ListView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/baofang_order_select_commend_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="吃货最光荣"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <RatingBar
+                        android:id="@+id/baofang_order_select_commend_rb"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:isIndicator="false"
+                        android:numStars="5" />
+
+                    <TextView
+                        android:id="@+id/baofang_order_select_commend_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="2015-02-25"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/baofang_order_select_commend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:text="噶而过阿萨德刚和爱好热阿尔哈尔二胡版的噶而过阿萨德刚和爱好热阿尔哈尔二胡版的噶而过阿萨德刚和爱好热阿尔哈尔二胡版噶而过阿萨德"
+                    android:textSize="16sp" />
+
+                <GridView
+                    android:id="@+id/baofang_order_select_commend_pic_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="auto_fit"
+                    android:columnWidth="90dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" >
+                </GridView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/baofang_order_select_commend_check_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="2" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="查看全部评价"
+                    android:textColor="#4488cc"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="&gt;"
+                    android:textColor="#4488cc"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/baofang_order_select_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

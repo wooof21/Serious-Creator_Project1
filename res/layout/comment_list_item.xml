@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/baofang_order_select_commend_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="吃货最光荣"
+            android:textColor="#7f7f7f"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RatingBar
+                android:id="@+id/baofang_order_select_commend_rb"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="false"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/baofang_order_select_commend_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="2015-02-25"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/baofang_order_select_commend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="噶而过阿萨德刚和爱好热阿尔哈尔二胡版的噶而过阿萨德刚和爱好热阿尔哈尔二胡版的噶而过阿萨德刚和爱好热阿尔哈尔二胡版噶而过阿萨德"
+            android:textColor="#7f7f7f"
+            android:textSize="16sp" />
+
+        <GridView
+            android:id="@+id/baofang_order_select_commend_pic_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" >
+        </GridView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/zhongxin_bottom_fragment"
+        android:background="#f4f4f4" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/zhongxin_top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/zhongxin_top_bg" >
+
+                <com.chihuoshijian.view.RoundImageView
+                    android:id="@+id/zhongxin_main_round_iv"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/zhongxin_touxiang"
+                    imagecontrol:border_inside_color="#f5d6aa"
+                    imagecontrol:border_outside_color="#f5d6aa"
+                    imagecontrol:border_thickness="1dp" />
+
+                <TextView
+                    android:id="@+id/zhongxin_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/zhongxin_main_round_iv"
+                    android:layout_marginLeft="28dp"
+                    android:layout_toRightOf="@+id/zhongxin_main_round_iv"
+                    android:text="吃货最光荣"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#40000000"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <LinearLayout
+                        android:id="@+id/zhongxin_my_clect_ll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:id="@+id/zhongxin_my_clect_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="77"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="我的收藏"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zhongxin_my_coupon_ll"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:id="@+id/zhongxin_my_coupon_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="77"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:paddingTop="5dp"
+                            android:text="我的优惠券"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_marginTop="5dp"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/zhongxin_all_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/zhongxin_order_pic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="我的订单"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="60dp"
+                    android:text="查看全部订单>"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RelativeLayout
+                    android:id="@+id/zhongxin_main_order_done_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/zhongxin_main_order_done_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/zhongxin_order_done_pic" />
+
+                    <TextView
+                        android:id="@+id/zhongxin_done_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/zhongxin_main_order_done_iv"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/round_full_color_tv_red"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="1dp"
+                        android:text="67"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/zhongxin_main_order_done_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="已完成订单" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zhong_xin_hold_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/zhongxin_main_order_hold_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/zhongxin_order_hold_pic" />
+
+                    <TextView
+                        android:id="@+id/zhongxin_hold_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/zhongxin_main_order_hold_iv"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/round_full_color_tv_red"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="1dp"
+                        android:text="67"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/zhongxin_main_order_hold_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="未完成订单" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/zhongxin_tomark_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/zhongxin_main_order_tomark_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/zhongxin_to_mark_pic" />
+
+                    <TextView
+                        android:id="@+id/zhongxin_tomark_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/zhongxin_main_order_tomark_iv"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/round_full_color_tv_red"
+                        android:paddingBottom="1dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="1dp"
+                        android:text="67"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/zhongxin_main_order_tomark_iv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="10dp"
+                        android:text="待评价" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/zhongxin_baofang_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/zhongxin_baofang_history_pic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="包房记录"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="60dp"
+                    android:text="查看全部记录>"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/zhongxin_personal_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/zhongxin_personal_pic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="个人资料查看与修改"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </ScrollView>
+
+    <fragment
+        android:id="@+id/zhongxin_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

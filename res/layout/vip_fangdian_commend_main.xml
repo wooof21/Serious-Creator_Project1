@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/baofang_order_select_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/baofang_order_select_bottom_fragment"
+        android:background="#f4f4f4" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/zhongxin_top_rl"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/baofang_order_select_top_bg" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#40000000"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.1"
+                        android:ellipsize="marquee"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text="如意坊豆捞(亚泰大街店)"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_commend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:background="@drawable/corners_bg_lred_sr"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="评价餐厅"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="4.02" >
+
+                <LinearLayout
+                    android:id="@+id/vip_canting_commend_map"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:weightSum="13" >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="2"
+                        android:src="@drawable/list_item_map" />
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="11"
+                        android:padding="5dp"
+                        android:singleLine="false"
+                        android:text="自由大路自由大路自由大路自由大路自由大路自由大路"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.02"
+                    android:background="?android:attr/listDivider"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/vip_canting_commend_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:src="@drawable/list_item_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:weightSum="3.02" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="全部菜品"
+                        android:textColor="#909090"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/vip_canting_commend_top_divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:background="#ff3c40"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.01"
+                    android:background="?android:attr/listDivider"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_commented"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="已评价菜品"
+                        android:textColor="#909090"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/vip_canting_commend_top_divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:background="@null"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="0.01"
+                    android:background="?android:attr/listDivider"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/vip_canting_commend_to_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp"
+                        android:text="待评价菜品"
+                        android:textColor="#909090"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/vip_canting_commend_top_divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="4px"
+                        android:background="@null"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/vip_canting_commend_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="?android:attr/listDivider"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

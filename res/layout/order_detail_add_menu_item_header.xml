@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/order_detail_add_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/order_detaile_middle_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/order_detail_rest_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="圣马可餐厅"
+            android:textColor="#666666"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="单号："
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/order_detail_order_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:text="0109105"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/order_detail_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:text="2015-05-20"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/listDivider"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+</LinearLayout>

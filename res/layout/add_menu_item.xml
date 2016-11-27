@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="?android:attr/listDivider"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" >
+
+            <ImageView
+                android:id="@+id/add_menu_item_pic"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/list_item_pic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/order_center_list_item_food_price_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2" >
+
+                <TextView
+                    android:id="@+id/order_center_list_item_food_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="锅包肉"
+                    android:textColor="#ff7679"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/order_center_list_item_food_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="￥253.00"
+                    android:textColor="#ff7679"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/add_menu_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="false"
+                android:text="中国吉林省长春市卫星广场成绩上午"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/add_menu_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="￥253"
+                android:textColor="#ff3c40"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4.6" >
+
+				<TextView 
+				    android:id="@+id/add_menu_item_plus"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/coener_bg_grey_left_radius"
+				    android:text="+"
+				    android:textSize="15sp"
+				    android:gravity="center"
+				    />
+				<TextView 
+				    android:id="@+id/add_menu_item_count"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/corner_bg_grey_no_radius"
+				    android:text="1"
+				    android:textColor="#cccccc"
+				    android:textSize="15sp"
+				    android:gravity="center"
+				    />
+				<TextView 
+				    android:id="@+id/add_menu_item_minus"
+				    android:layout_width="0dp"
+				    android:layout_height="match_parent"
+				    android:layout_weight="1"
+				    android:background="@drawable/coener_bg_grey_right_radius"
+				    android:text="-"
+				    android:textSize="15sp"
+				    android:gravity="center"
+				    />
+				<TextView 
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.3"
+				    />
+                <TextView 
+                    android:id="@+id/add_menu_item_order_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="删除"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:background="@drawable/corner_bg_grey_stroke"
+                    />
+                <TextView 
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_weight="0.3"
+				    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

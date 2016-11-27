@@ -1,0 +1,29 @@
+<com.chihuoshijian.view.DragView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dish_order_dragview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <!-- 左侧菜单页面 -->
+
+    <include 
+        android:id="@+id/dish_order_left"
+        layout="@layout/sliding_menu_leftmenu" />
+
+    <com.chihuoshijian.view.DragSupportView
+        android:id="@+id/dish_order_dragsupport"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eeeeee"
+        android:orientation="vertical" >
+
+        <!-- headbanner -->
+
+        <include 
+            android:id="@+id/dish_order_middle"
+            layout="@layout/sliding_menu_middleview" />
+    </com.chihuoshijian.view.DragSupportView>
+
+</com.chihuoshijian.view.DragView>

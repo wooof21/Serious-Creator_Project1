@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.main.membercenter;
+
+import com.chihuoshijian.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+/**
+ * @author Liming Chu
+ *
+ * @param
+ * @return
+ */
+public class MemberCenterMainActivity extends Activity{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.zhongxin_main);
+	}
+
+	@Override
+	public void onBackPressed(){
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+	}
+
+	
+}

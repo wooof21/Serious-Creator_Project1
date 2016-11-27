@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb" >
+
+    <fragment
+        android:id="@+id/add_menu_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/add_menu_count_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_menu_bottom_fragment"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="2.01" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="共计："
+                android:textColor="#787878"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/add_menu_dish_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="2份"
+                android:textColor="#787878"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_menu_divider_middle"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="?android:attr/listDivider"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical|left"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="总价："
+                android:textColor="#787878"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/add_menu_total_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical|right"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="￥60"
+                android:textColor="#ff3c40"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_menu_button_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_menu_count_ll"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/add_menu_add_dish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/corners_bg_lred"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="添加菜品"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/add_menu_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/corners_bg_lred"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="提交订单"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/add_menu_divider_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/add_menu_button_ll"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/listDivider"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/add_menu_divider_top"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/add_menu_count_ll"
+        android:background="?android:attr/listDivider"
+        android:scaleType="centerCrop" />
+
+    <ListView
+        android:id="@+id/add_menu_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/add_menu_button_ll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp" >
+    </ListView>
+
+</RelativeLayout>

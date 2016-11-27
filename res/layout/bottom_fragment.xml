@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="4" >
+    
+    <LinearLayout 
+        android:id="@+id/bottom_fragment_ll1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ImageView 
+            android:id="@+id/bottom_fragment_iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_fragment_baofang_state_normal"
+            android:paddingTop="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜包房"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/bottom_fragment_ll2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ImageView 
+            android:id="@+id/bottom_fragment_iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_fragment_canting_state_normal"
+            android:paddingTop="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜餐厅"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/bottom_fragment_ll3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ImageView 
+            android:id="@+id/bottom_fragment_iv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_fragment_meishi_state_normal"
+            android:paddingTop="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜美食"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/bottom_fragment_ll4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+        <ImageView 
+            android:id="@+id/bottom_fragment_iv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_fragment_zhongxin_state_normal"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="2dp"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="吃货中心"
+            android:textSize="14sp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

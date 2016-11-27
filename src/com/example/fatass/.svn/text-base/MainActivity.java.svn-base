@@ -1,0 +1,256 @@
+package com.example.fatass;
+
+import com.chihuoshijian.R;
+import com.main.baofang.BaoFangMainListPage;
+import com.main.baofang.BaoFangOrderSuccess;
+import com.main.search.SearchActivity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Paint;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends Activity implements OnClickListener{
+	
+	/** view */
+	private ImageView bfIv;//搜包房按钮
+	private ImageView ctIv;//搜餐厅按钮
+	private ImageView msIv;	//搜美食按钮
+	private TextView rmTv;//热门搜索中的单个textview
+	private LinearLayout search;//搜索按钮
+
+	
+	private boolean		isFristTime	= true;
+
+	/** 标签之间的间距 px */
+	final int			itemMargins	= 10;
+
+	/** 标签的行间距 px */
+	final int			lineMargins	= 10;
+
+	private ViewGroup	container	= null;
+
+	
+	private String[]	tags		= { "大约在冬季",
+			"漂洋过海的来看你", "天下有情人", "我很认真", "夜夜夜夜", "想你的夜",
+			"背叛", "趁早", "旧情绵绵", "谁明浪子心", "安妮", "说谎的爱人",
+			"不浪漫的罪名", "不愿一个人", "风吹麦浪" };
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		prepareView();
+		
+		container =
+				(ViewGroup) findViewById(R.id.container);
+
+		
+	}
+	/**
+	 * 初始化控件
+	 * */
+	private void prepareView(){
+		bfIv = (ImageView)findViewById(R.id.main_sou_baofang);
+		ctIv = (ImageView)findViewById(R.id.main_sou_canting);
+		msIv = (ImageView)findViewById(R.id.main_sou_meishi);
+		search = (LinearLayout)findViewById(R.id.main_search_ll);
+		
+		bfIv.setOnClickListener(this);
+		ctIv.setOnClickListener(this);
+		msIv.setOnClickListener(this);
+		search.setOnClickListener(this);
+		
+	}
+	
+	/** 
+	 * 首页热门搜索， 自动换行linearlayout
+	 *  */
+	@Override
+	public void onWindowFocusChanged(boolean hasFocus){
+		super.onWindowFocusChanged(hasFocus);
+		if(hasFocus && isFristTime){
+			isFristTime = false;
+			final int containerWidth =
+					container.getMeasuredWidth()
+							- container.getPaddingRight()
+							- container.getPaddingLeft();
+
+			final LayoutInflater inflater =
+					getLayoutInflater();
+
+			/** 用来测量字符的宽度 */
+			final Paint paint = new Paint();
+			final TextView textView =
+					(TextView) inflater.inflate(
+							R.layout.remen_textview, null);
+			final int itemPadding =
+					textView.getCompoundPaddingLeft()
+							+ textView
+									.getCompoundPaddingRight();
+			final LinearLayout.LayoutParams tvParams =
+					new LinearLayout.LayoutParams(
+							LayoutParams.WRAP_CONTENT,
+							LayoutParams.WRAP_CONTENT);
+			tvParams.setMargins(0, 0, itemMargins, 0);
+
+			paint.setTextSize(textView.getTextSize());
+
+			LinearLayout layout = new LinearLayout(this);
+			layout.setLayoutParams(new LinearLayout.LayoutParams(
+					LayoutParams.MATCH_PARENT,
+					LayoutParams.WRAP_CONTENT));
+			layout.setOrientation(LinearLayout.HORIZONTAL);
+			container.addView(layout);
+
+			final LinearLayout.LayoutParams params =
+					new LinearLayout.LayoutParams(
+							LayoutParams.MATCH_PARENT,
+							LayoutParams.WRAP_CONTENT);
+			params.setMargins(0, lineMargins, 0, 0);
+
+			/** 一行剩下的空间 **/
+			int remainWidth = containerWidth;
+
+			for(int i = 0;i < tags.length;++i){
+				final String text = tags[i];
+				final float itemWidth =
+						paint.measureText(text)
+								+ itemPadding;
+				if(remainWidth > itemWidth){
+					addItemView(inflater, layout, tvParams,
+							text, i);
+				}else{
+					resetTextViewMarginsRight(layout);
+					layout = new LinearLayout(this);
+					layout.setLayoutParams(params);
+					layout.setOrientation(LinearLayout.HORIZONTAL);
+
+					/** 将前面那一个textview加入新的一行 */
+					addItemView(inflater, layout, tvParams,
+							text, i);
+					container.addView(layout);
+					remainWidth = containerWidth;
+				}
+				remainWidth =
+						(int) (remainWidth - itemWidth + 0.5f)
+								- itemMargins;
+			}
+			resetTextViewMarginsRight(layout);
+		}
+	}
+
+	/**
+	 * 将每行最后一个textview的MarginsRight去掉 
+	 * */
+	private void resetTextViewMarginsRight(
+			ViewGroup viewGroup){
+		final TextView tempTextView =
+				(TextView) viewGroup.getChildAt(viewGroup
+						.getChildCount() - 1);
+		tempTextView
+				.setLayoutParams(new LinearLayout.LayoutParams(
+						LayoutParams.WRAP_CONTENT,
+						LayoutParams.WRAP_CONTENT));
+	}
+
+	/**
+	 * 将view添加到viewgroup中
+	 * */
+	private void addItemView(LayoutInflater inflater,
+			ViewGroup viewGroup, LayoutParams params,
+			String text, int tag){
+		rmTv =
+				(TextView) inflater.inflate(
+						R.layout.remen_textview, null);
+		rmTv.setTag(tag);
+		rmTv.setText(text);
+		rmTv.setOnClickListener(new OnClickListener(){
+			
+			@Override
+			public void onClick(View v){
+				// TODO Auto-generated method stub
+				TextView tv = (TextView) v;
+				Toast.makeText(MainActivity.this, tv.getText().toString(), Toast.LENGTH_LONG).show();
+			}
+		});
+		viewGroup.addView(rmTv, params);
+	}
+
+	/* (non-Javadoc)
+	 * @see android.view.View.OnClickListener#onClick(android.view.View)
+	 */
+	@Override
+	public void onClick(View v){
+		// TODO Auto-generated method stub
+		switch(v.getId()){
+			case R.id.main_sou_baofang:
+				Intent intent = new Intent(MainActivity.this, BaoFangMainListPage.class);
+				startActivity(intent);
+			break;
+			case R.id.main_search_ll:
+				Intent intent1 = new Intent(MainActivity.this, SearchActivity.class);
+				startActivity(intent1);
+				break;
+			default:
+			break;
+		}
+		
+	}
+/** 扫面2维码
+	// private int QR_WIDTH = 1200, QR_HEIGHT = 1200;
+	// // 要转换的地址或字符串,可以是中文
+	// public void createQRImage(String url){
+	// try{
+	// // 判断URL合法性
+	// if(url == null || "".equals(url)
+	// || url.length() < 1){
+	// return;
+	// }
+	// Hashtable<EncodeHintType, String> hints =
+	// new Hashtable<EncodeHintType, String>();
+	// hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
+	// // 图像数据转换，使用了矩阵转换
+	// BitMatrix bitMatrix =
+	// new QRCodeWriter().encode(url,
+	// BarcodeFormat.QR_CODE,
+	// QR_WIDTH, QR_HEIGHT, hints);
+	// int[] pixels = new int[QR_WIDTH * QR_HEIGHT];
+	// // 下面这里按照二维码的算法，逐个生成二维码的图片，
+	// // 两个for循环是图片横列扫描的结果
+	// for(int y = 0;y < QR_HEIGHT;y++){
+	// for(int x = 0;x < QR_WIDTH;x++){
+	// if(bitMatrix.get(x, y)){
+	// pixels[y * QR_WIDTH + x] =
+	// 0xff000000;
+	// }else{
+	// pixels[y * QR_WIDTH + x] =
+	// 0xffffffff;
+	// }
+	// }
+	// }
+	// // 生成二维码图片的格式，使用ARGB_8888
+	// Bitmap bitmap =
+	// Bitmap.createBitmap(QR_WIDTH,
+	// QR_HEIGHT,
+	// Bitmap.Config.ARGB_8888);
+	// bitmap.setPixels(pixels, 0, QR_WIDTH, 0, 0,
+	// QR_WIDTH, QR_HEIGHT);
+	// // 显示到一个ImageView上面
+	// iv.setImageBitmap(bitmap);
+	// }catch(WriterException e){
+	// e.printStackTrace();
+	// }
+	// }
+*/
+	}

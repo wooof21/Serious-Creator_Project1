@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fe4d01"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/search_back"
+            android:src="@drawable/search_pic" />
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:background="#ffffff"
+            android:hint="输入想吃的美食名称" 
+            >
+        </EditText>
+
+        <TextView
+            android:id="@+id/search_frame_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/search_back"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="搜索"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    
+    <com.chihuoshijian.view.ExpandTabView
+        android:id="@+id/canting_main_list_page_expandtab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout1" >
+    </com.chihuoshijian.view.ExpandTabView>
+
+    
+    
+    
+        <fragment
+        android:id="@+id/canting_main_list_page_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+        <ListView
+            android:id="@+id/canting_main_list_page_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/canting_main_list_page_bottom_fragment"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/canting_main_list_page_expandtab_view" >
+
+        </ListView>
+
+</RelativeLayout>

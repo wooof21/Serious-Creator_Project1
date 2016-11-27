@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.main.baofang;
+
+import com.chihuoshijian.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+/**
+ * @author Liming Chu
+ *	包房预定成功页面
+ * @param
+ * @return
+ */
+public class BaoFangOrderSuccess extends Activity{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.baofang_order_success);
+	}
+
+	@Override
+	public void onBackPressed(){
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+	}
+
+	
+}

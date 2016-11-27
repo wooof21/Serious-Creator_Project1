@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chihuoshijian.view.ExpandTabView
+        android:id="@+id/baofang_main_list_page_expandtab_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.chihuoshijian.view.ExpandTabView>
+
+    
+    
+    
+        <fragment
+        android:id="@+id/baofang_main_list_page_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+        <ListView
+            android:id="@+id/baofang_main_list_page_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/baofang_main_list_page_bottom_fragment"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/baofang_main_list_page_expandtab_view" >
+
+        </ListView>
+
+</RelativeLayout>

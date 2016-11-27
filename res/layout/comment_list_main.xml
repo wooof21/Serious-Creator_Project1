@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4" >
+
+    <fragment
+        android:id="@+id/baofang_order_select_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="总评价"
+            android:textColor="#9a9a9a"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/comment_list_mian_ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:id="@+id/comment_list_mian_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="4.5分"
+            android:textColor="#fa952f"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/linearLayout1"
+        android:background="?android:attr/listDivider"
+        android:scaleType="centerCrop" />
+
+    <ListView
+        android:id="@+id/comment_list_mian_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/baofang_order_select_bottom_fragment"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1" >
+
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/time_line_bg" >
+
+    <fragment
+        android:id="@+id/time_line_bottom_fragment"
+        android:name="com.fragment.mainbottom.MainBottomFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/time_line_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/time_line_bottom_fragment"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/corners_bg_lred_sr"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="确认提交"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <com.chihuoshijian.view.RoundImageView
+        android:id="@+id/time_line_round_iv"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/zhongxin_touxiang" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_above="@id/time_line_submit"
+        android:layout_below="@id/time_line_round_iv"
+        android:layout_marginLeft="95dp"
+        android:background="#ffffff"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/time_line_dot1"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/time_line_dot2"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="210dp"
+        android:background="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/time_line_dot3"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="270dp"
+        android:background="@drawable/dot" />
+
+    <TextView
+        android:id="@+id/time_line_dot4"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginLeft="93dp"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/dot" />
+
+    <EditText
+        android:id="@+id/time_line_et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="137dp"
+        android:layout_toRightOf="@id/time_line_dot1"
+        android:background="@drawable/corners_bg_white_stroke"
+        android:ems="7"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/time_line_et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="197dp"
+        android:layout_toRightOf="@id/time_line_dot2"
+        android:background="@drawable/corners_bg_white_stroke"
+        android:numeric="integer"
+        android:maxLength="11"
+        android:ems="7"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+    </EditText>
+
+    <Spinner
+        android:id="@+id/time_line_spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/time_line_et1"
+        android:layout_alignRight="@id/time_line_et1"
+        android:layout_marginTop="257dp"
+        android:layout_toRightOf="@id/time_line_dot3"
+        android:background="@drawable/corners_bg_white_stroke"
+        android:ems="7"
+        android:entries="@array/sex"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+    </Spinner>
+
+    <LinearLayout 
+        android:id="@+id/time_line_spinner_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/time_line_et1"
+        android:layout_alignRight="@id/time_line_et1"
+        android:layout_toRightOf="@id/time_line_dot4"
+        android:layout_marginTop="317dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+        
+        <Spinner
+        android:id="@+id/time_line_spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/corners_bg_white_stroke"
+        android:ems="7"
+        android:entries="@array/area"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+    </Spinner>
+    <Spinner
+        android:id="@+id/time_line_spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/corners_bg_white_stroke"
+        android:ems="7"
+        android:entries="@array/area"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp" >
+    </Spinner>
+    </LinearLayout>
+    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_line_submit"
+        android:layout_alignTop="@+id/time_line_et1"
+        android:background="@drawable/time_line_textview_frame"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="姓名"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_line_submit"
+        android:layout_alignTop="@+id/time_line_et2"
+        android:background="@drawable/time_line_textview_frame"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="手机"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_line_submit"
+        android:layout_alignTop="@+id/time_line_spinner1"
+        android:background="@drawable/time_line_textview_frame"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="性别"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/time_line_submit"
+        android:layout_alignTop="@+id/time_line_spinner_ll"
+        android:background="@drawable/time_line_textview_frame"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="地区"
+        android:textSize="16sp" />
+
+</RelativeLayout>

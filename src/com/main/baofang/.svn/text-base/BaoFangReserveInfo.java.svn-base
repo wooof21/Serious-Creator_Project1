@@ -1,0 +1,103 @@
+/**
+ * 
+ */
+package com.main.baofang;
+
+import com.chihuoshijian.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+/**
+ * @author Liming Chu 包房预留信息填写
+ * @param
+ * @return
+ */
+public class BaoFangReserveInfo extends Activity{
+
+	/** view */
+	private ImageView		back;
+	private LinearLayout	llIncluded;
+	private EditText		reserveName;
+	private EditText		reservePhone;
+	private TextView		reserveTime;
+
+	/** view included */
+	private ImageView		pic;
+	private TextView		name;
+	private RatingBar		ratingBar;
+	private TextView		rating;
+	private TextView		average;
+	private TextView		range;
+	private LinearLayout	map;
+	private TextView		address;
+	private ImageView		phone;
+	private LinearLayout	gone;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.baofang_reserve_info);
+		prepareView();
+		
+	}
+
+	private void prepareView(){
+		back =
+				(ImageView) findViewById(R.id.baofang_reserve_back);
+		llIncluded =
+				(LinearLayout) findViewById(R.id.baofang_reserve_info_ll_included);
+		reserveName =
+				(EditText) findViewById(R.id.baofang_reserve_name_et);
+		reservePhone =
+				(EditText) findViewById(R.id.baofang_reserve_phone_et);
+		reserveTime =
+				(TextView) findViewById(R.id.baofang_reserve_time);
+
+		pic =
+				(ImageView) llIncluded
+						.findViewById(R.id.list_item_pic);
+		name =
+				(TextView) llIncluded
+						.findViewById(R.id.list_item_name);
+		ratingBar =
+				(RatingBar) llIncluded
+						.findViewById(R.id.list_item_ratingbar);
+		rating =
+				(TextView) llIncluded
+						.findViewById(R.id.list_item_rating);
+		average =
+				(TextView) llIncluded
+						.findViewById(R.id.list_item_average);
+		range =
+				(TextView) llIncluded
+						.findViewById(R.id.list_item_range);
+		map =
+				(LinearLayout) llIncluded
+						.findViewById(R.id.list_item_map);
+		address =
+				(TextView) llIncluded
+						.findViewById(R.id.list_item_address);
+		phone =
+				(ImageView) llIncluded
+						.findViewById(R.id.list_item_phone);
+		gone =
+				(LinearLayout) llIncluded
+						.findViewById(R.id.main_list_item_order);
+		gone.setVisibility(View.GONE);
+	}
+
+	@Override
+	public void onBackPressed(){
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+	}
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chihuoshijian"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.example.fatass.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.main.baofang.BaoFangOrderSuccess" >
+        </activity>
+        <activity android:name="com.main.baofang.BaoFangReserveInfo" >
+        </activity>
+        <activity android:name="com.main.search.SearchActivity" >
+        </activity>
+        <activity android:name="com.main.membercenter.MemberCenterMainActivity" >
+        </activity>
+        <activity android:name="com.main.baofang.BaoFangMainListPage" >
+        </activity>
+    </application>
+
+</manifest>
